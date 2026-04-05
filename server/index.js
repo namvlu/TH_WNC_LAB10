@@ -6,7 +6,7 @@ const PORT = 3000;
 
 // 1. Cấu hình CORS (FIX lỗi Network Error)
 app.use(cors({
-  origin: 'http://localhost:3001', // ✅ frontend React
+  origin: ['http://localhost:3001', 'http://localhost:3002'], // ✅ frontend React
   credentials: true
 }));
 
