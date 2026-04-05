@@ -150,7 +150,7 @@ class Myprofile extends Component {
         };
 
         axios
-            .put('http://localhost:3001/api/customer/customers/' + id, customer, config)
+            .put('http://localhost:3000/api/customer/customers/' + id, customer, config)
             .then((res) => {
                 const result = res.data;
 
