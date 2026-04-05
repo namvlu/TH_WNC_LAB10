@@ -123,7 +123,7 @@ class Myorders extends Component {
         };
 
         axios
-            .get('http://localhost:3001/api/customer/orders/customer/' + cid, config)
+            .get('http://localhost:3000/api/customer/orders/customer/' + cid, config)
             .then((res) => {
                 const result = res.data;
                 this.setState({ orders: result });
