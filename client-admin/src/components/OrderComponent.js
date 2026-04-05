@@ -153,7 +153,7 @@ class Order extends Component {
     };
 
     axios
-      .get('http://localhost:3001/api/admin/orders', config)
+      .get('http://localhost:3000/api/admin/orders', config)
       .then((res) => {
         console.log(res.data); // debug
 
@@ -180,7 +180,7 @@ class Order extends Component {
     };
 
     axios
-      .put('http://localhost:3001/api/admin/orders/status/' + id, body, config)
+      .put('http://localhost:3000/api/admin/orders/status/' + id, body, config)
       .then((res) => {
         const result = res.data;
         if (result) {
