@@ -57,7 +57,7 @@ class CategoryDetail extends Component {
   // apis
   apiDeleteCategory(id) {
     const config = { headers: { 'x-access-token': this.context.token } };
-    axios.delete('http://localhost:3001/api/admin/categories/' + id, config).then((res) => {
+    axios.delete('http://localhost:3000/api/admin/categories/' + id, config).then((res) => {
       const result = res.data;
       if (result) {
         alert('OK BABY!');
@@ -82,7 +82,7 @@ class CategoryDetail extends Component {
   // apis
   apiPutCategory(id, cate) {
     const config = { headers: { 'x-access-token': this.context.token } };
-    axios.put('http://localhost:3001/api/admin/categories/' + id, cate, config).then((res) => {
+    axios.put('http://localhost:3000/api/admin/categories/' + id, cate, config).then((res) => {
       const result = res.data;
       if (result) {
         alert('OK BABY!');
@@ -106,7 +106,7 @@ class CategoryDetail extends Component {
   // apis
   apiPostCategory(cate) {
     const config = { headers: { 'x-access-token': this.context.token } };
-    axios.post('http://localhost:3001/api/admin/categories', cate, config).then((res) => {
+    axios.post('http://localhost:3000/api/admin/categories', cate, config).then((res) => {
       const result = res.data;
       if (result) {
         alert('OK BABY!');
