@@ -109,7 +109,7 @@ class Product extends Component {
     };
 
     axios
-      .get('http://localhost:3001/api/admin/products?page=' + page, config)
+      .get('http://localhost:3000/api/admin/products?page=' + page, config)
       .then((res) => {
         const result = res.data;
 
