@@ -214,7 +214,7 @@ class ProductDetail extends Component {
     };
 
     axios
-      .get('http://localhost:3001/api/admin/categories', config)
+      .get('http://localhost:3000/api/admin/categories', config)
       .then((res) => {
         // ✅ FIX QUAN TRỌNG
         const result = res.data;
@@ -229,7 +229,7 @@ class ProductDetail extends Component {
       headers: { 'x-access-token': this.context.token }
     };
 
-    axios.post('http://localhost:3001/api/admin/products', prod, config)
+    axios.post('http://localhost:3000/api/admin/products', prod, config)
       .then((res) => {
         if (res.data) {
           alert('OK!');
@@ -244,7 +244,7 @@ class ProductDetail extends Component {
     };
 
     axios
-      .put('http://localhost:3001/api/admin/products', { id, ...prod }, config)
+      .put('http://localhost:3000/api/admin/products', { id, ...prod }, config)
       .then((res) => {
         if (res.data) {
           alert('OK!');
@@ -258,7 +258,7 @@ class ProductDetail extends Component {
       headers: { 'x-access-token': this.context.token }
     };
 
-    axios.delete('http://localhost:3001/api/admin/products/' + id, config)
+    axios.delete('http://localhost:3000/api/admin/products/' + id, config)
       .then((res) => {
         if (res.data) {
           alert('OK!');
@@ -273,7 +273,7 @@ class ProductDetail extends Component {
     };
 
     axios
-      .get('http://localhost:3001/api/admin/products?page=' + this.props.curPage, config)
+      .get('http://localhost:3000/api/admin/products?page=' + this.props.curPage, config)
       .then((res) => {
         const result = res.data;
         this.props.updateProducts(result.products, result.noPages);
