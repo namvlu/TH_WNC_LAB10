@@ -85,7 +85,7 @@ class Category extends Component {
     };
 
     axios
-      .get('http://localhost:3001/api/admin/categories', config)
+      .get('http://localhost:3000/api/admin/categories', config)
       .then((res) => {
         console.log(res.data); // debug
 
