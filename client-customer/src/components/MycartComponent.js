@@ -114,7 +114,7 @@ class Mycart extends Component {
             headers: { 'x-access-token': this.context.token }
         };
 
-        axios.post('http://localhost:3001/api/customer/checkout', body, config).then((res) => {
+        axios.post('http://localhost:3000/api/customer/checkout', body, config).then((res) => {
             const result = res.data;
 
             if (result) {
