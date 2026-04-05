@@ -33,7 +33,7 @@ class Login extends Component {
 
   // apis
   apiLogin(account){
-    axios.post('http://localhost:3001/api/customer/login', account).then((res)=>{
+    axios.post('http://localhost:3000/api/customer/login', account).then((res)=>{
       const result = res.data;
       if(result.success===true){ this.context.setToken(result.token); this.context.setCustomer(result.customer); this.props.navigate('/home'); }
       else{ alert(result.message); }
