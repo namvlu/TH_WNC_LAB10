@@ -82,14 +82,14 @@ class Home extends Component {
 
   // APIs
   apiGetNewProducts() {
-    axios.get('http://localhost:3001/api/customer/products/new').then((res) => {
+    axios.get('http://localhost:3000/api/customer/products/new').then((res) => {
       const result = res.data;
       this.setState({ newprods: result });
     });
   }
 
   apiGetHotProducts() {
-    axios.get('http://localhost:3001/api/customer/products/hot').then((res) => {
+    axios.get('http://localhost:3000/api/customer/products/hot').then((res) => {
       const result = res.data;
       this.setState({ hotprods: result });
     });
